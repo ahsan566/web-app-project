@@ -27,6 +27,7 @@
                 font-weight: 100;
                 height: 100vh;
                 margin: 0;
+				 
             }
 
 			ul{
@@ -35,14 +36,72 @@
 			
 			}
 
-				
+			.button:hover{
+			
+			background-color: #ff0000;
+			
+			}
+
+			.navbutton:hover{
+			
+			background-color: #ff0000;
+			
+			}
+
+			.button {
+			background-color: #990000; 
+			border: none;
+			color: white;
+			padding: 15px 32px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			
+			}
+
+			.navbutton {
+			background-color: #990000; 
+			border: none;
+			color: white;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 14px;
+			
+			}
+
+			.navbar{
+			
+			background-color: #990000; 
+			border: none;
+			color: white;
+
+
+			}
+
+			a {
+		color: white;}
+
+		a:hover{
+	
+		color: white;
+		text-decoration:none;}
+
+	.nav>li>a:focus, .nav>li>a:hover {
+        text-decoration: none;
+        background-color: transparent !important;
+  }
+
+			
+
 	</style>
 
 
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-default navbar-static-top">
+        <nav class="navbar  navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
 
@@ -60,6 +119,9 @@
                     </a>
                 </div>
 
+				
+
+
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
@@ -70,8 +132,35 @@
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @guest
-                            <li><a href="{{ route('login') }}">Login</a></li>
-                            <li><a href="{{ route('register') }}">Register</a></li>
+
+						<li>
+						<a href="/player">
+				<button class="navbutton">Players</button>
+					</a></li>
+
+
+			<li>
+						<a href="/venue">
+				<button class="navbutton">Venues</button>
+					</a></li>
+
+
+				<li><a href="/team">
+				<button class="navbutton">Teams</button>
+					</a></li>
+					
+					<li><a href="/matches">
+				<button class="navbutton">Matches</button>
+					</a></li>
+
+                          <li> <a href="/login">
+				<button class="navbutton">Login</button>
+					</a></li>
+                            <li><a href="/register">
+				<button class="navbutton">Register</button>
+					</a></li>
+						
+					
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" v-pre>

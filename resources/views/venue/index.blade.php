@@ -4,7 +4,8 @@
 @if (Session::has('success_msg'))
 <p class="alert alert-success">{!! Session::pull('success_msg') !!}<p>
   @endif
-  <div class="container">
+
+   <div class="container">
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
         <div class="panel panel-default">
@@ -42,7 +43,9 @@
                   </table>
                 </div>
               </div>
-              {{ link_to_route('venue.create', 'Add new venue', null, ['class'=>'btn btn-success']) }}
+			  <div align="center">
+              {{ link_to_route('venue.create', 'Add New Venue', null, ['class'=>'button a']) }}
+			  </div>
             </div>
           </div>
         </div>

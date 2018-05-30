@@ -2,8 +2,11 @@
 
 @section('content')
 @if (Session::has('success_msg'))
+
+
 <p class="alert alert-success">{!! Session::pull('success_msg') !!}<p>
   @endif
+
   <div class="container">
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
@@ -43,8 +46,10 @@
                   </table>
                 </div>
               </div>
-              {{ link_to_route('player.create', 'Add new player', null, ['class'=>'btn btn-success']) }}
-            </div>
+				<div align="center">
+			   {{ link_to_route('player.create', 'Add New Player', null, ['class'=>'button']) }}
+			   </div>
+           </div>
           </div>
         </div>
         @endsection

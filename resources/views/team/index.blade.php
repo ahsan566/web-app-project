@@ -42,7 +42,9 @@
                   </table>
                 </div>
               </div>
-              {{ link_to_route('team.create', 'Add new team', null, ['class'=>'btn btn-success']) }}
+			  <div align="center">
+              {{ link_to_route('team.create', 'Add new team', null, ['class'=>'button']) }}
+			   </div>
             </div>
           </div>
         </div>

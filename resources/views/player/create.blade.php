@@ -62,7 +62,7 @@
               </div><br><br>
 
             <div align="center">
-            <button type="submit" class="btn btn-primary">Add Player</button>
+            <button type="submit" class="button">Add Player</button>
           </div>
             <input type="hidden" value="{{Session::token()}}" name="_token">
 

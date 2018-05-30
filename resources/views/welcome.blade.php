@@ -133,7 +133,7 @@
 
 				<div class="flex">
                  <a href="/player">
-				<button class="button">The Team</button>
+				<button class="button">The Players</button>
 					</a>
 
 				<div class="flex">

@@ -15,6 +15,7 @@
      return view('welcome');
  });
 
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -24,6 +25,8 @@ Route::resource('player','PlayerController');
 Route::resource('venue','VenueController');
 
 Route::resource('team','TeamController');
+
+Route::resource('matches','MatchController');
 
 Route::get('/admin', [
     'uses' => 'AppController@getAdminPage',
