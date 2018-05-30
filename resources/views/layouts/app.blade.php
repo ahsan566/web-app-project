@@ -168,6 +168,25 @@
 						
 					
                         @else
+
+						<li><a href="/player">
+				<button class="navbutton">Players</button>
+					</a></li>
+
+
+				<li><a href="/venue">
+				<button class="navbutton">Venues</button>
+					</a></li>
+
+
+				<li><a href="/team">
+				<button class="navbutton">Teams</button>
+					</a></li>
+
+				<li><a href="/blog">
+				<button class="navbutton">Blog</button>
+					</a></li>
+
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
