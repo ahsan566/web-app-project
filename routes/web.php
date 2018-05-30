@@ -26,7 +26,7 @@ Route::resource('venue','VenueController');
 
 Route::resource('team','TeamController');
 
-Route::resource('matches','MatchController');
+Route::resource('blog','MatchController');
 
 Route::get('/admin', [
     'uses' => 'AppController@getAdminPage',
