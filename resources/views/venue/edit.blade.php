@@ -31,7 +31,7 @@
               </div><br><br>
 
             <div align="center">
-            <button type="submit" class="btn btn-primary">Update Venue</button>
+            <button type="submit" class="button">Update Venue</button>
           </div>
         {!! Form::close() !!}
         <!--   </form> -->

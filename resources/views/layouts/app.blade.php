@@ -133,14 +133,15 @@
                         <!-- Authentication Links -->
                         @guest
 
-						<li>
-						<a href="/player">
+
+
+				
+				<li><a href="/player">
 				<button class="navbutton">Players</button>
 					</a></li>
 
 
-			<li>
-						<a href="/venue">
+				<li><a href="/venue">
 				<button class="navbutton">Venues</button>
 					</a></li>
 
@@ -148,15 +149,17 @@
 				<li><a href="/team">
 				<button class="navbutton">Teams</button>
 					</a></li>
-					
-					<li><a href="/matches">
-				<button class="navbutton">Matches</button>
-					</a></li>
 
-                          <li> <a href="/login">
+				<li><a href="/blog">
+				<button class="navbutton">Blog</button>
+					</a></li>
+				
+				
+                 <li> <a href="/login">
 				<button class="navbutton">Login</button>
 					</a></li>
-                            <li><a href="/register">
+                 
+				 <li><a href="/register">
 				<button class="navbutton">Register</button>
 					</a></li>
 						

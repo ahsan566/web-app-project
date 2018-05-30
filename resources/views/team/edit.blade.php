@@ -32,7 +32,7 @@
               </div><br><br>
 
             <div align="center">
-            <button type="submit" class="btn btn-primary">Update team</button>
+            <button type="submit" class="button">Update team</button>
           </div>
         {!! Form::close() !!}
         <!--   </form> -->

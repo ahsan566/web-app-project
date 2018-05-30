@@ -68,7 +68,7 @@
               </div><br><br>
 
             <div align="center">
-            <button type="submit" class="btn btn-primary">Update Player</button>
+            <button type="submit" class="button">Update Player</button>
           </div>
         {!! Form::close() !!}
         <!--   </form> -->
