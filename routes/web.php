@@ -15,10 +15,6 @@
      return view('welcome');
  });
 
-
-Route::get('/about','CricketController@about');
-Route::get('/contactus','CricketController@contact');
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html lang="{{ app()->getLocale() }}">
+
+
+
+
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,10 +13,32 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>CricketIBA</title>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+
+	<style>
+	 html, body {
+                background-color: #000;
+                color: #000;
+                font-family: 'Raleway', sans-serif;
+                font-weight: 100;
+                height: 100vh;
+                margin: 0;
+            }
+
+			ul{
+			
+				display:in-line;
+			
+			}
+
+				
+	</style>
+
+
 </head>
 <body>
     <div id="app">
@@ -29,7 +56,7 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
+                       CricketIBA
                     </a>
                 </div>
 
