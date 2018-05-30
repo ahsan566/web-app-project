@@ -18,7 +18,7 @@
 
 Auth::routes();
 
-Route::get('/', 'HomeController@index')->name('welcome');
+Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('player','PlayerController');
 
