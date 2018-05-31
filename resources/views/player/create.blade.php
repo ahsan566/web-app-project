@@ -61,6 +61,18 @@
                 </div>
               </div><br><br>
 
+              <div class="form-group">
+                <label class="control-label col-lg-3">Role</label>
+                <div class="col-lg-6">
+                  <select name="role" class="form-control chosen chosen-select">
+                    <option value="Null">Select Role</option>
+                    <option value="Batsman">Batsman</option>
+                    <option value="Bowler">Bowler</option>
+                    <option value="All-Rounder">All-Rounder</option>
+                  </select>
+                </div>
+              </div><br><br>
+
             <div align="center">
             <button type="submit" class="btn btn-primary">Add Player</button>
           </div>

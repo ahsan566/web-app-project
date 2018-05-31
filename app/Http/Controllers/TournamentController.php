@@ -1,84 +1,69 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Http\Controllers\MatchController;
+use App\Tournament;
+use App\Team;
+use App\Match;
+use App\Venue;
 use Illuminate\Http\Request;
 
 class TournamentController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
-        //
+      $team = Team::all();
+      $tournaments = Tournament::all();
+      return view('tournament.index',compact('tournaments','team'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
-        //
+        return view('tournament.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-        //
+        $tournament = new Tournament();
+        $tournament->name = $request->name;
+        $tournament->city = $request->city;
+        $tournament->start_date = $request->start_date;
+        $tournament->end_date = $request->end_date;
+        $tournament->save();
+        return redirect()->route('tournament.index')->with('message','tournament has been added successfully');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function show($id)
     {
-        //
+        $teams = Team::all();
+        $venues = Venue::all();
+        $matches = Match::where('tournament_id','=',$id)->get();
+        $tournament = Tournament::findOrFail($id);
+        return view('tournament.detail',compact('teams','venues','matches','tournament'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
-        //
+      $tournament = Tournament::findOrFail($id);
+      return view('tournament.edit', compact('tournament'));
+
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, $id)
     {
-        //
+        $tournament = Tournament::findOrFail($id);
+        $tournament->name = $request->name;
+        $tournament->city = $request->city;
+        $tournament->start_date = $request->start_date;
+        $tournament->end_date = $request->end_date;
+        $tournament->save();
+        return redirect()->route('tournament.index')->with('message','tournament has been edited successfully');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
-        //
+        Tournament::destroy($id);
+        return redirect()->route('tournament.index');
     }
 }

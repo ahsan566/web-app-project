@@ -15,9 +15,6 @@
 //     return view('welcome');
 // });
 
-Route::get('/', 'CricketController@welcome');
-Route::get('/about','CricketController@about');
-Route::get('/contactus','CricketController@contact');
 
 Auth::routes();
 
@@ -29,19 +26,19 @@ Route::resource('venue','VenueController');
 
 Route::resource('team','TeamController');
 
-Route::get('/admin', [
-    'uses' => 'AppController@getAdminPage',
-    'as' => 'admin',
-    'middleware' => 'roles',
-    'roles' => ['Admin']
-]);
+Route::resource('match','MatchController');
 
-Route::post('/admin/assign-roles', [
-  'uses' => 'AppController@postAdminAssignRoles',
-  'as' => 'admin.assign',
-  'middleware' => 'roles',
-  'roles' => ['Admin']
-]);
+Route::resource('tournament','TournamentController');
+
+Route::resource('playerteam','PlayerTeamController');
+
+Route::get('/getImport','ExcelController@getImport');
+
+Route::post('/postImport','ExcelController@postImport');
+
+// Route::get('/admin', 'AdminController@index');
+//
+// Route::get('/superadmin', 'SuperAdminController@index');
 
 
 //
@@ -49,3 +46,7 @@ Route::post('/admin/assign-roles', [
 //      'uses' => 'PlayerController@store',
 //      'as' => 'player/store'
 // ]);
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

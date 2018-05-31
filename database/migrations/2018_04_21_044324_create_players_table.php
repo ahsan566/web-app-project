@@ -20,6 +20,7 @@ class CreatePlayersTable extends Migration
             $table->string('program');
             $table->integer('runs');
             $table->integer('wickets');
+            $table->string('role');
             $table->timestamps();
         });
     }

@@ -14,7 +14,12 @@ class Match extends Model
       return $this->belongsTo('App\Venue');
     }
 
-    public function team(){
-      return $this->belongsTo('App\Team');
+    public function team1(){
+      return $this->belongsTo('App\Team', 'team_1_id');
+    }
+
+    //relationship for team 2
+    public function team2(){
+      return $this->belongsTo('App\Team', 'team_2_id');
     }
 }

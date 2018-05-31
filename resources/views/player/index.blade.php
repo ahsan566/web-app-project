@@ -13,7 +13,7 @@
 
             <table class="table table-hover">
               <tr>
-                <th class="text-center">Title</th>
+                <th class="text-center">Name</th>
                   <th class="text-center">Program</th>
                   </tr>
 

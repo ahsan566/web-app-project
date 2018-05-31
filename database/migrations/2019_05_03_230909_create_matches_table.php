@@ -17,13 +17,13 @@ class CreateMatchesTable extends Migration
             $table->increments('id');
             $table->integer('tournament_id')->unsigned();
             $table->foreign('tournament_id')->references('id')->on('tournaments');
+            $table->date('match_date');
             $table->integer('venue_id')->unsigned();
-            $table->foreign('venue_id')->references('id')->on('venues');
+            $table->foreign('venue_id')->references('id')->on('venues')->onDelete('cascade');
             $table->integer('team_1_id')->unsigned();
             $table->foreign('team_1_id')->references('id')->on('teams');
             $table->integer('team_2_id')->unsigned();
             $table->foreign('team_2_id')->references('id')->on('teams');
-            $table->string('winning_team');
             $table->timestamps();
         });
     }

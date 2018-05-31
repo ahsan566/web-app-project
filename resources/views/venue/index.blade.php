@@ -9,6 +9,10 @@
       <div class="col-md-8 col-md-offset-2">
         <div class="panel panel-default">
           <div class="panel-heading">Venues</div>
+          <a href="#" class="btn btn-danger">Delete All</a>
+          <a href="{{URL::to('getImport')}}" class="btn btn-primary">Import</a>
+          <a href="#" class="btn btn-success">Export</a>
+
           <div class="panel-body">
 
             <table class="table table-hover">
