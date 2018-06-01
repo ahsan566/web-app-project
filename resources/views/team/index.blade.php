@@ -19,11 +19,11 @@
                     <th class="text-center"></th>
                   </tr>
                 </thead>
-
                   @foreach($teams as $team)
                   <tr>
                     <td align="center">{{$team -> name}}</td>
                     <td align="center">{{$team -> program}}</td>
+                    @if(!Auth::guest())
                         <!-- {{ link_to_route('venue.edit', 'Edit', [$venue->id], ['class'=>'btn btn-primary']) }} -->
                         <td align="center">  <a href="{{action('TeamController@edit',$team->id)}}" class="btn btn-primary">Edit</a> </td>
                         <td>  <form action="{{action('TeamController@destroy', $team->id)}}" method="post">
@@ -37,15 +37,17 @@
                       {!! Form::close() !!} -->
 
                     </tr>
-
+                    @endif
                     @endforeach
                   </table>
                 </div>
               </div>
+              @if(!Auth::guest())
 			  <div align="center">
               {{ link_to_route('team.create', 'Add New Team', null, ['class'=>'button']) }}
 			   </div>
             </div>
           </div>
         </div>
+        @endif
         @endsection

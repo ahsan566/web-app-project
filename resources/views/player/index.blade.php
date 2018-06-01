@@ -19,12 +19,12 @@
                 <th class="text-center">Title</th>
                   <th class="text-center">Program</th>
                   </tr>
-
                   @foreach($players as $player)
                   <tr>
                     <td align="center">{{$player -> name}}</td>
                     <td align="center">{{$player -> program}}</td>
                     <td align="center">
+                        @if(!Auth::guest())
                       {{ link_to_route('player.edit', 'Edit', [$player->id], ['class'=>'btn btn-primary']) }}
                     </td>
 
@@ -41,15 +41,17 @@
 
                       </td>
                     </tr>
-
+                    @endif
                     @endforeach
                   </table>
                 </div>
               </div>
+              @if(!Auth::guest())
 				<div align="center">
 			   {{ link_to_route('player.create', 'Add New Player', null, ['class'=>'button']) }}
 			   </div>
            </div>
           </div>
         </div>
+        @endif
         @endsection

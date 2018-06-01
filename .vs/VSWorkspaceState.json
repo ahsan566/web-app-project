@@ -11,6 +11,6 @@
     "\\resources\\views\\auth",
     "\\resources\\views\\layouts"
   ],
-  "SelectedNode": "\\app\\Http\\Controllers\\PlayerController.php",
+  "SelectedNode": "\\config\\app.php",
   "PreviewInSolutionExplorer": false
 }

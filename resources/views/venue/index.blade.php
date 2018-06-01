@@ -20,11 +20,11 @@
                     <th class="text-center"></th>
                   </tr>
                 </thead>
-
                   @foreach($venues as $venue)
                   <tr>
                     <td align="center">{{$venue -> name}}</td>
                     <td align="center">{{$venue -> city}}</td>
+                    @if(!Auth::guest())
                         <!-- {{ link_to_route('venue.edit', 'Edit', [$venue->id], ['class'=>'btn btn-primary']) }} -->
                         <td align="center">  <a href="{{action('VenueController@edit',$venue->id)}}" class="btn btn-primary">Edit</a> </td>
                         <td>  <form action="{{action('VenueController@destroy', $venue->id)}}" method="post">
@@ -38,15 +38,17 @@
                       {!! Form::close() !!} -->
 
                     </tr>
-
+                    @endif
                     @endforeach
                   </table>
                 </div>
               </div>
+              @if(!Auth::guest())
 			  <div align="center">
               {{ link_to_route('venue.create', 'Add New Venue', null, ['class'=>'button a']) }}
 			  </div>
             </div>
           </div>
         </div>
+        @endif
         @endsection

@@ -10,6 +10,11 @@ use Alert;
 
 class TeamController extends Controller
 {
+
+  public function __construct()
+  {
+      $this->middleware('auth', ['except' => ['index','view_team']]);
+  }
     /**
      * Display a listing of the resource.
      *

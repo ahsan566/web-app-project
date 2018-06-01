@@ -10,6 +10,7 @@
         <th></th>
         </thead>
         <tbody>
+                @if(!Auth::guest())
         @foreach($users as $user)
             <tr>
                 <form action="{{ route('admin.assign') }}" method="post">
@@ -24,4 +25,5 @@
         @endforeach
         </tbody>
     </table>
+    @endif
 @endsection
