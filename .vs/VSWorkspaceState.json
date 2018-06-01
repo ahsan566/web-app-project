@@ -8,9 +8,9 @@
     "\\config",
     "\\resources",
     "\\resources\\views",
-    "\\resources\\views\\player",
-    "\\routes"
+    "\\resources\\views\\auth",
+    "\\resources\\views\\layouts"
   ],
-  "SelectedNode": "\\resources\\views\\player\\index.blade.php",
+  "SelectedNode": "\\app\\Http\\Controllers\\PlayerController.php",
   "PreviewInSolutionExplorer": false
 }

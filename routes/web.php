@@ -28,23 +28,41 @@ Route::resource('team','TeamController');
 
 Route::resource('blog','BlogController');
 
-Route::get('/admin', [
-    'uses' => 'AppController@getAdminPage',
-    'as' => 'admin',
-    'middleware' => 'roles',
-    'roles' => ['Admin']
-]);
+Route::group(['middleware' => 'web'], function () {
+    Route::get('/', function () {
+        return view('welcome');
+    })->name('main');
 
-Route::post('/admin/assign-roles', [
-  'uses' => 'AppController@postAdminAssignRoles',
-  'as' => 'admin.assign',
-  'middleware' => 'roles',
-  'roles' => ['Admin']
-]);
-
-
-//
-// Route::post('player/store',[
-//      'uses' => 'PlayerController@store',
-//      'as' => 'player/store'
-// ]);
+    Route::get('/admin', [
+        'uses' => 'AppController@getAdminPage',
+        'as' => 'admin',
+        'middleware' => 'roles',
+        'roles' => ['Admin']
+    ]);
+    Route::post('/admin/assign-roles', [
+        'uses' => 'AppController@postAdminAssignRoles',
+        'as' => 'admin.assign',
+        'middleware' => 'roles',
+        'roles' => ['Admin']
+    ]);
+    Route::get('/signup', [
+        'uses' => 'AuthController@getSignUpPage',
+        'as' => 'signup'
+    ]);
+    Route::post('/signup', [
+        'uses' => 'AuthController@postSignUp',
+        'as' => 'signup'
+    ]);
+    Route::get('/signin', [
+        'uses' => 'AuthController@getSignInPage',
+        'as' => 'signin'
+    ]);
+    Route::post('/signin', [
+        'uses' => 'AuthController@postSignIn',
+        'as' => 'signin'
+    ]);
+    Route::get('/logout', [
+        'uses' => 'AuthController@getLogout',
+        'as' => 'logout'
+    ]);
+});

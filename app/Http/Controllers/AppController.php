@@ -20,9 +20,6 @@ class AppController extends Controller{
           if ($request['role_user']) {
               $user->roles()->attach(Role::where('name', 'User')->first());
           }
-          if ($request['role_author']) {
-              $user->roles()->attach(Role::where('name', 'Author')->first());
-          }
           if ($request['role_admin']) {
               $user->roles()->attach(Role::where('name', 'Admin')->first());
           }

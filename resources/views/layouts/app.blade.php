@@ -164,7 +164,11 @@
                  
 				 <li><a href="/register">
 				<button class="navbutton">Register</button>
-					</a></li>
+                    </a></li>
+                    
+                    <li><a href="/admin">
+                    <button class = "navbutton">Admin</button>
+                    </a></li>
 						
 					
                         @else
@@ -185,7 +189,11 @@
 
 				<li><a href="/blog">
 				<button class="navbutton">Blog</button>
-					</a></li>
+                    </a></li>
+                    
+                    <li><a href="/admin">
+                        <button class = "navbutton">Admin</button>
+                        </a></li>
 				
 
                             <li class="navbutton">
