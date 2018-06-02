@@ -28,6 +28,16 @@ Route::resource('team','TeamController');
 
 Route::resource('blog','BlogController');
 
+Route::resource('match','MatchController');
+
+Route::resource('tournament','TournamentController');
+
+Route::resource('playerteam','PlayerTeamController');
+
+Route::get('/getImport','ExcelController@getImport');
+
+Route::post('/postImport','ExcelController@postImport');
+
 Route::group(['middleware' => 'web'], function () {
     Route::get('/', function () {
         return view('welcome');

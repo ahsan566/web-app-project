@@ -33,40 +33,8 @@
               </div>
             </div><br><br>
 
-            <div class="form-group">
-              <label class="control-label col-lg-3">Player</label>
-              <div class="col-lg-6">
-                <input type="text" class="form-control"  placeholder="Player Name" name="player">
-              </div>
-            </div><br><br>
-
-
-
-            <form id="surveyForm" method="post" class="form-horizontal">
-
-              <div class="form-group">
-                <label class="col-sm-3 control-label">Options</label>
-                <div class="col-sm-5">
-                  <input type="text" class="form-control" placeholder="Player Name" name="option[]" />
-                </div>
-                <div class="col-sm-4">
-                  <button type="button" class="btn btn-default addButton"><i class="fa fa-plus"></i>Add Field</button>
-                </div>
-              </div>
-
-              <!-- The option field template containing an option field and a Remove button -->
-              <div class="form-group hide" id="optionTemplate">
-                <div class="col-sm-offset-3 col-sm-5">
-                  <input class="form-control" type="text" name="option[]" />
-                </div>
-                <div class="col-sm-4">
-                  <button type="button" class="btn btn-default removeButton"><i class="fa fa-minus"></i></button>
-                </div>
-              </div>
-            </form><br><br><br>
-
             <div align="center">
-              <button type="submit" class="button">Add Team</button>
+              <button type="submit" class="button a">Add Team</button>
             </div>
             <input type="hidden" value="{{Session::token()}}" name="_token">
 

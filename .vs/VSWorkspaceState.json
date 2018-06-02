@@ -3,14 +3,12 @@
     "",
     "\\app",
     "\\app\\Http",
-    "\\app\\Http\\Controllers",
-    "\\app\\Http\\Controllers\\Auth",
-    "\\config",
     "\\resources",
     "\\resources\\views",
-    "\\resources\\views\\auth",
-    "\\resources\\views\\layouts"
+    "\\resources\\views\\tournament",
+    "\\routes",
+    "\\storage"
   ],
-  "SelectedNode": "\\config\\app.php",
+  "SelectedNode": "\\resources\\views\\tournament\\detail.blade.php",
   "PreviewInSolutionExplorer": false
 }

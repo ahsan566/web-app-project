@@ -153,11 +153,15 @@
 				<button class="navbutton">Teams</button>
 					</a></li>
 
+				<li><a href="/tournament">
+                    <button class = "navbutton">Tournaments</button>
+                    </a></li>				
+
+				
 				<li><a href="/blog">
 				<button class="navbutton">Blog</button>
 					</a></li>
-				
-				
+									
                  <li> <a href="/login">
 				<button class="navbutton">Login</button>
 					</a></li>
@@ -166,9 +170,7 @@
 				<button class="navbutton">Register</button>
                     </a></li>
                     
-                    <li><a href="/admin">
-                    <button class = "navbutton">Admin</button>
-                    </a></li>
+                   
 						
 					
                         @else
@@ -187,14 +189,17 @@
 				<button class="navbutton">Teams</button>
 					</a></li>
 
+				<li><a href="/tournament">
+                 <button class = "navbutton">Tournaments</button>
+                 </a></li>				
+
 				<li><a href="/blog">
 				<button class="navbutton">Blog</button>
                     </a></li>
                     
-                    <li><a href="/admin">
-                        <button class = "navbutton">Admin</button>
-                        </a></li>
-				
+                 <li><a href="/admin">
+                 <button class = "navbutton">Admin</button>
+                 </a></li>
 
                             <li class="navbutton">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" v-pre>
